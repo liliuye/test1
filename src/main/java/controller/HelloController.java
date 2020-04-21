@@ -3,8 +3,8 @@ package controller;
 import base.common.RequestMapping;
 
 /**
- * 处理器:
- * 	负责处理业务逻辑。
+ * 锟斤拷锟斤拷锟斤拷:
+ * 	锟斤拷锟斤拷锟斤拷业锟斤拷锟竭硷拷锟斤拷
  */
 public class HelloController {
 	
@@ -13,11 +13,13 @@ public class HelloController {
 		System.out.println(
 				"HelloController's hello");
 		/*
-		 * 返回视图名。
-		 * DispatcherServlet会依据视图名定位到
-		 * 具体的jsp页面("/WEB-INF/" + 视图名+".jsp")。
+		 * 锟斤拷锟斤拷锟斤拷图锟斤拷锟斤拷
+		 * DispatcherServlet锟斤拷锟斤拷锟斤拷锟斤拷图锟斤拷锟斤拷位锟斤拷
+		 * 锟斤拷锟斤拷锟絡sp页锟斤拷("/WEB-INF/" + 锟斤拷图锟斤拷+".jsp")锟斤拷
 		 */
+		 System.out.println("hi");
 		return "hello";
+	    
 	}
 	
 }
