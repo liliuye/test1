@@ -17,7 +17,7 @@ public class HelloController {
 		 * DispatcherServlet��������ͼ����λ��
 		 * �����jspҳ��("/WEB-INF/" + ��ͼ��+".jsp")��
 		 */
-		 System.out.println("hi");
+		 
 		return "hello";
 	    
 	}
