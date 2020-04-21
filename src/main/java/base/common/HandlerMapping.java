@@ -6,22 +6,22 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Ó³Éä´¦ÀíÆ÷:
- *    ¸ºÔğÌá¹©ÇëÇóÂ·¾¶Óë´¦ÀíÆ÷µÄ¶ÔÓ¦¹ØÏµ¡£
- *    ±ÈÈç£¬"/hello.do"Õâ¸öÇëÇóÓ¦¸ÃÓÉ
- *    HelloControllerµÄhello·½·¨À´´¦Àí¡£
+ * Ó³ï¿½ä´¦ï¿½ï¿½ï¿½ï¿½:
+ *    ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ë´¦ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½
+ *    ï¿½ï¿½ï¿½ç£¬"/hello.do"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+ *    HelloControllerï¿½ï¿½helloï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *
  */
 public class HandlerMapping {
 	
-	//handlerMapÓÃÓÚ´æ·ÅÇëÇóÂ·¾¶Óë´¦ÀíÆ÷µÄ¶ÔÓ¦¹ØÏµ¡£
+	//handlerMapï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ë´¦ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½
 	private Map<String,Handler> handlerMap = 
 			new HashMap<String,Handler>();
 	
 	/**
-	 * ÒÀ¾İÇëÇóÂ·¾¶·µ»ØHandler¶ÔÏó¡£
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Handlerï¿½ï¿½ï¿½ï¿½
 	 *   ×¢:
-	 *   	Handler¶ÔÏó·â×°ÁË´¦ÀíÆ÷¼°Method¶ÔÏó¡£
+	 *   	Handlerï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Methodï¿½ï¿½ï¿½ï¿½
 	 */
 	public Handler getHandler(String path){
 		return handlerMap.get(path);
@@ -29,32 +29,32 @@ public class HandlerMapping {
 	
 	
 	/**
-	 * ¸ºÔğ½¨Á¢ÇëÇóÂ·¾¶ÓëHandlerµÄ¶ÔÓ¦¹ØÏµ¡£
-	 * Ê×ÏÈ±éÀúbeans¼¯ºÏ£¬È»ºóÀûÓÃjava·´Éä¶ÁÈ¡
-	 * ´¦ÀíÆ÷ÖĞµÄ@RequestMappingµÄÇëÇóÂ·¾¶¡£
-	 * ½ÓÏÂÀ´£¬ÒÔÇëÇóÂ·¾¶×÷Îªkey,ÒÔHandler×÷Îª
-	 * value(Handler·â×°ÁË´¦ÀíÆ÷¼°Method¶ÔÏó),
-	 * ½«Õâ¸ö¶ÔÓ¦¹ØÏµ´æ·Åµ½handlerMapÀïÃæ¡£
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½Handlerï¿½Ä¶ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½
+	 * ï¿½ï¿½ï¿½È±ï¿½ï¿½ï¿½beansï¿½ï¿½ï¿½Ï£ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½javaï¿½ï¿½ï¿½ï¿½ï¿½È¡
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½@RequestMappingï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½Îªkey,ï¿½ï¿½Handlerï¿½ï¿½Îª
+	 * value(Handlerï¿½ï¿½×°ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Methodï¿½ï¿½ï¿½ï¿½),
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½Åµï¿½handlerMapï¿½ï¿½ï¿½æ¡£
 	 */
 	public void process(List beans) {
 		for(Object bean : beans){
 			Class clazz = bean.getClass();
-			//»ñµÃ´¦ÀíÆ÷µÄËùÓĞ·½·¨
+			//ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ·ï¿½ï¿½ï¿½
 			Method[] methods = 
 					clazz.getDeclaredMethods();
-			//±éÀú´¦ÀíÆ÷µÄËùÓĞ·½·¨
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ·ï¿½ï¿½ï¿½
 			for(Method mh : methods){
-				//»ñµÃ¼ÓÔÚ·½·¨Ç°µÄ@RequestMapping×¢½â
+				//ï¿½ï¿½Ã¼ï¿½ï¿½Ú·ï¿½ï¿½ï¿½Ç°ï¿½ï¿½@RequestMapping×¢ï¿½ï¿½
 				RequestMapping rm = 
 					mh.getDeclaredAnnotation(
 							RequestMapping.class);
-				//¶ÁÈ¡@RequestMapping×¢½âµÄvalueÊôĞÔÖµ
-				//(¸ÃÊôĞÔÖµÊÇÇëÇóÂ·¾¶)
+				//ï¿½ï¿½È¡@RequestMapping×¢ï¿½ï¿½ï¿½valueï¿½ï¿½ï¿½ï¿½Öµ
+				//(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½)
 				String path = rm.value();
 				System.out.println("path:" + path);
-				//ÒÔÇëÇóÂ·¾¶×÷Îªkey,ÒÔHandler¶ÔÏó×÷Îª 
-				//value(¸Ã¶ÔÏó·â×°ÁËMethod¼°´¦ÀíÆ÷ÊµÀı),
-				//½«¶ÔÓ¦¹ØÏµ´æ·Åµ½handlerMap¡£
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½Îªkey,ï¿½ï¿½Handlerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª 
+				//value(ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½Methodï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½),
+				//ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½Åµï¿½handlerMapï¿½ï¿½
 				handlerMap.put(path, 
 						new Handler(mh,bean));
 			}
@@ -62,7 +62,6 @@ public class HandlerMapping {
 		}
 		System.out.println("handlerMap:" 
 				+ handlerMap);
-		
 		
 		
 	}
