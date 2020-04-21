@@ -9,6 +9,7 @@ public class LoginController {
 	public String toLogin(){
 		System.out.println(
 				"LoginController's toLogin");
+		//æ·»åŠ æ³¨é‡Š
 		return "login";
 	}
 	
@@ -17,7 +18,7 @@ public class LoginController {
 			HttpServletRequest request){
 		System.out.println(
 				"LoginController's login");
-		//¶ÁÈ¡ÓÃ»§ÃûºÍÃÜÂë
+		//ï¿½ï¿½È¡ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		String username = 
 				request.getParameter("username");
 		String pwd = 
@@ -26,17 +27,17 @@ public class LoginController {
 				"username:" + username);
 		if("Tom".equals(username) && 
 				"1234".equals(pwd)){
-			//µÇÂ¼³É¹¦
+			//ï¿½ï¿½Â¼ï¿½É¹ï¿½
 			/*
-			 * Èç¹ûÊÓÍ¼ÃûÊÇÒÔ"redirect:"¿ªÍ·£¬±íÊ¾
-			 * ÖØ¶¨Ïò¡£
+			 * ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"redirect:"ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½Ê¾
+			 * ï¿½Ø¶ï¿½ï¿½ï¿½
 			 */
 			return "redirect:toSuccess.do";
 		}else{
-			//µÇÂ¼Ê§°Ü
+			//ï¿½ï¿½Â¼Ê§ï¿½ï¿½
 			request.setAttribute(
 					"login_failed", 
-					"ÓÃ»§Ãû»òÃÜÂë´íÎó");
+					"ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			return "login";
 		}
 		
